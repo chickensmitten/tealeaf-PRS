@@ -46,6 +46,7 @@ class Player
 end
 
 class Human < Player
+  
   def pick_hand
     begin
     puts "Pick One: (r, p, s)"
@@ -54,12 +55,15 @@ class Human < Player
 
     self.hand = Hand.new(c)
   end
+  
 end
 
 class Computer < Player
+  
   def pick_hand
-    self.hand = Hand.new(Game::CHOICES.keys.sample)
+    self.hand = Hand.new(Game::CHOICES.keys.sample)  
   end
+
 end
 
 class Game
