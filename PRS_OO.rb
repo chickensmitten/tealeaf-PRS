@@ -7,7 +7,7 @@ class Hand
     @value = v
   end
 
-  def <=> (another_hand) #question, how is UFO invoked again?
+  def <=> (another_hand) #question, how is UFO referenced to compare_hands?
     if @value == another_hand.value
       0
     elsif (@value == 'p' && another_hand.value == 'r') || (@value == 'r' && another_hand.value == 's') || (@value == 's' && another_hand.value == 'p')
@@ -77,10 +77,10 @@ class Game
   end
 
   def compare_hands
-    if player.hand == computer.hand #the player class invokes, the hand class
+    if player.hand == computer.hand #the player class and the hand class
       puts "It's a tie!"
     elsif player.hand > computer.hand
-      player.hand.display_winning_message #invoke method within hand class
+      player.hand.display_winning_message #instantiate method within hand class
       puts "#{player.name}, you win!"
     else
       computer.hand.display_winning_message
