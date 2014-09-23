@@ -77,9 +77,9 @@ class Game
   end
 
   def compare_hands
-    if player.hand == computer.hand #the player class and the hand class
+    if player.hand == (computer.hand) #the player class and the hand class
       puts "It's a tie!"
-    elsif player.hand > computer.hand
+    elsif player.hand > (computer.hand)
       player.hand.display_winning_message #instantiate method within hand class
       puts "#{player.name}, you win!"
     else
